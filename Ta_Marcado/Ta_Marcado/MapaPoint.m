@@ -22,8 +22,15 @@
     return self;
 }
 
--(id) init{
-    return [self initWithCoordinate:CLLocationCoordinate2DMake(-23.5376830, -46.6546540) title:@"" end:@""];
+-(MKAnnotationView *)annotationView{
+    MKAnnotationView *av = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"MyCustomAnnotation"];
+    
+    av.enabled = YES;
+    av.canShowCallout = YES;
+    av.image = [UIImage imageNamed:@"pin.png"];
+    av.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    return av;
 }
 
 @end

@@ -37,10 +37,11 @@
     coord2.center.latitude = -23.5370830;
     coord2.center.longitude = -46.6546540;
     MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
-    
-    //MapaPoint *mp1 = [[MapaPoint alloc] init];
     [mapa addAnnotation:mp1];
     [mapa addAnnotation:mp2];
+    
+    
+    
 
 }
 
@@ -50,6 +51,7 @@
 }
 
 - (IBAction)marcar:(id)sender {
+    
     
 }
 
