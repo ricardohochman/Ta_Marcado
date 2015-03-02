@@ -13,19 +13,17 @@
 @end
 
 @implementation ViewController
-@synthesize locationManager;
+@synthesize locationManager, mapa;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    locationManager=[[CLLocationManager alloc]init];
+    locationManager = [[CLLocationManager alloc]init];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDelegate:self];
-    _mapa.showsUserLocation=YES;
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
     }
     [locationManager startUpdatingLocation];
-    
-        
+    mapa.userTrackingMode = true;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,28 +35,27 @@
 }
 
 - (IBAction)localizacaoAtual:(id)sender {
+//    CLLocationCoordinate2D loc = [[_locations lastObject]coordinate];
+//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+//    [mapa setRegion:region animated:YES];
+//    [mapa setZoomEnabled:YES];
     [locationManager startUpdatingLocation];
-    CLLocationCoordinate2D loc =[[_locations lastObject]coordinate];
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
-    _mapa.userTrackingMode = true;
-    [_mapa setRegion:region animated:YES];
-    [_mapa setZoomEnabled:YES];
+    mapa.userTrackingMode = true;
     
-
 }
 
 - (IBAction)tipoMapa:(id)sender {
     switch (((UISegmentedControl *)sender).selectedSegmentIndex) {
         case 0:
-            _mapa.mapType = MKMapTypeStandard;
+            mapa.mapType = MKMapTypeStandard;
             break;
         
         case 1:
-            _mapa.mapType = MKMapTypeHybrid;
+            mapa.mapType = MKMapTypeHybrid;
             break;
        
         case 2:
-            _mapa.mapType = MKMapTypeSatellite;
+            mapa.mapType = MKMapTypeSatellite;
             break;
             
         default:
@@ -68,16 +65,7 @@
 }
 - (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations
 {
-    //Encontrar as coordenadas de localização atual
-    CLLocationCoordinate2D loc = [[locations lastObject] coordinate];
-    
-    //Determinar região com as coordenadas de localização atual e os limites N/S e L/O no zoom em metros
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
-    
-    //Mudar a região atual para visualização de forma animada
-    [_mapa setRegion:region animated:YES ];
-    
-    
+    _locations = locations;
 }
 
 

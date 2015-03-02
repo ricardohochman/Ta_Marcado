@@ -73,7 +73,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-SJ-nyv">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-SJ-nyv">
                                 <rect key="frame" x="132" y="93" width="344" height="310"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="3pc-wZ-AtY"/>
@@ -139,12 +139,12 @@
                                 <exclude reference="btu-dw-EH1"/>
                                 <exclude reference="aJc-P7-qRQ"/>
                                 <exclude reference="y6x-dH-FAl"/>
+                                <exclude reference="nRc-hx-d9a"/>
+                                <exclude reference="nav-9q-PBQ"/>
                                 <exclude reference="AWa-g1-9Fx"/>
                                 <exclude reference="IHl-hA-7IZ"/>
                                 <exclude reference="KO3-m8-yYQ"/>
                                 <exclude reference="Uzl-fI-QRb"/>
-                                <exclude reference="nRc-hx-d9a"/>
-                                <exclude reference="nav-9q-PBQ"/>
                                 <exclude reference="jCC-VL-fVA"/>
                             </mask>
                         </variation>
@@ -161,12 +161,12 @@
                                 <include reference="btu-dw-EH1"/>
                                 <include reference="aJc-P7-qRQ"/>
                                 <include reference="y6x-dH-FAl"/>
+                                <include reference="nRc-hx-d9a"/>
+                                <include reference="nav-9q-PBQ"/>
                                 <include reference="AWa-g1-9Fx"/>
                                 <include reference="IHl-hA-7IZ"/>
                                 <exclude reference="KO3-m8-yYQ"/>
                                 <include reference="Uzl-fI-QRb"/>
-                                <include reference="nRc-hx-d9a"/>
-                                <include reference="nav-9q-PBQ"/>
                                 <include reference="jCC-VL-fVA"/>
                             </mask>
                         </variation>
@@ -216,7 +216,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="814"/>
+                                    <rect key="frame" x="0.0" y="-7" width="400" height="814"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9QZ-b3-tK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="333.75"/>
+            <point key="canvasLocation" x="1306.5" y="674.25"/>
         </scene>
     </scenes>
 </document>
