@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MapaPoint.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,23 @@
     }
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
+    
+    
+    MKCoordinateRegion coord1 = {{0.0, 0.0},{0.0, 0.0}};
+    coord1.center.latitude = -23.5376830;
+    coord1.center.longitude = -46.6546540;
+    
+    MapaPoint *mp1 = [[MapaPoint alloc] initWithCoordinate:coord1.center title:@"Teste 1" end:@"avenida Teste 1"];
+    
+    MKCoordinateRegion coord2 = {{0.0, 0.0},{0.0, 0.0}};
+    coord2.center.latitude = -23.5370830;
+    coord2.center.longitude = -46.6546540;
+    MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
+    
+    //MapaPoint *mp1 = [[MapaPoint alloc] init];
+    [mapa addAnnotation:mp1];
+    [mapa addAnnotation:mp2];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +50,7 @@
 }
 
 - (IBAction)marcar:(id)sender {
+    
 }
 
 - (IBAction)localizacaoAtual:(id)sender {

@@ -18,6 +18,7 @@
 		8CCC8FC01AA4D64D000594B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCC8FBF1AA4D64D000594B7 /* MapKit.framework */; };
 		8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8FC51AA4D737000594B7 /* CellViewController.m */; };
 		8CCC8FC91AA4D777000594B7 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8FC81AA4D777000594B7 /* TableViewController.m */; };
+		B32A9EC91AA4ED6C009A262E /* MapaPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B32A9EC81AA4ED6C009A262E /* MapaPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		8CCC8FC51AA4D737000594B7 /* CellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellViewController.m; path = ../CellViewController.m; sourceTree = "<group>"; };
 		8CCC8FC71AA4D777000594B7 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
 		8CCC8FC81AA4D777000594B7 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		B32A9EC71AA4ED6C009A262E /* MapaPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaPoint.h; sourceTree = "<group>"; };
+		B32A9EC81AA4ED6C009A262E /* MapaPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				8CCC8F9F1AA4CE34000594B7 /* ViewController.m */,
 				8CCC8FC71AA4D777000594B7 /* TableViewController.h */,
 				8CCC8FC81AA4D777000594B7 /* TableViewController.m */,
+				B32A9EC71AA4ED6C009A262E /* MapaPoint.h */,
+				B32A9EC81AA4ED6C009A262E /* MapaPoint.m */,
 				8CCC8FC41AA4D737000594B7 /* CellViewController.h */,
 				8CCC8FC51AA4D737000594B7 /* CellViewController.m */,
 				8CCC8FA11AA4CE34000594B7 /* Main.storyboard */,
@@ -242,6 +247,7 @@
 				8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */,
 				8CCC8FC91AA4D777000594B7 /* TableViewController.m in Sources */,
 				8CCC8F9A1AA4CE34000594B7 /* main.m in Sources */,
+				B32A9EC91AA4ED6C009A262E /* MapaPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				8CCC8FB91AA4CE34000594B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CCC8FBA1AA4CE34000594B7 /* Build configuration list for PBXNativeTarget "Ta_MarcadoTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				8CCC8FBC1AA4CE34000594B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
