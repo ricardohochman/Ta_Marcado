@@ -14,6 +14,10 @@
 		8CCC8FA51AA4CE34000594B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC8FA41AA4CE34000594B7 /* Images.xcassets */; };
 		8CCC8FA81AA4CE34000594B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC8FA61AA4CE34000594B7 /* LaunchScreen.xib */; };
 		8CCC8FB41AA4CE34000594B7 /* Ta_MarcadoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8FB31AA4CE34000594B7 /* Ta_MarcadoTests.m */; };
+		8CCC8FBE1AA4D646000594B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCC8FBD1AA4D646000594B7 /* CoreLocation.framework */; };
+		8CCC8FC01AA4D64D000594B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCC8FBF1AA4D64D000594B7 /* MapKit.framework */; };
+		8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8FC51AA4D737000594B7 /* CellViewController.m */; };
+		8CCC8FC91AA4D777000594B7 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8FC81AA4D777000594B7 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		8CCC8FAD1AA4CE34000594B7 /* Ta_MarcadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ta_MarcadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCC8FB21AA4CE34000594B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCC8FB31AA4CE34000594B7 /* Ta_MarcadoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ta_MarcadoTests.m; sourceTree = "<group>"; };
+		8CCC8FBD1AA4D646000594B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8CCC8FBF1AA4D64D000594B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8CCC8FC41AA4D737000594B7 /* CellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellViewController.h; path = ../CellViewController.h; sourceTree = "<group>"; };
+		8CCC8FC51AA4D737000594B7 /* CellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellViewController.m; path = ../CellViewController.m; sourceTree = "<group>"; };
+		8CCC8FC71AA4D777000594B7 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		8CCC8FC81AA4D777000594B7 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCC8FC01AA4D64D000594B7 /* MapKit.framework in Frameworks */,
+				8CCC8FBE1AA4D646000594B7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,8 @@
 		8CCC8F8B1AA4CE33000594B7 = {
 			isa = PBXGroup;
 			children = (
+				8CCC8FBF1AA4D64D000594B7 /* MapKit.framework */,
+				8CCC8FBD1AA4D646000594B7 /* CoreLocation.framework */,
 				8CCC8F961AA4CE33000594B7 /* Ta_Marcado */,
 				8CCC8FB01AA4CE34000594B7 /* Ta_MarcadoTests */,
 				8CCC8F951AA4CE33000594B7 /* Products */,
@@ -85,6 +99,10 @@
 				8CCC8F9C1AA4CE34000594B7 /* AppDelegate.m */,
 				8CCC8F9E1AA4CE34000594B7 /* ViewController.h */,
 				8CCC8F9F1AA4CE34000594B7 /* ViewController.m */,
+				8CCC8FC71AA4D777000594B7 /* TableViewController.h */,
+				8CCC8FC81AA4D777000594B7 /* TableViewController.m */,
+				8CCC8FC41AA4D737000594B7 /* CellViewController.h */,
+				8CCC8FC51AA4D737000594B7 /* CellViewController.m */,
 				8CCC8FA11AA4CE34000594B7 /* Main.storyboard */,
 				8CCC8FA41AA4CE34000594B7 /* Images.xcassets */,
 				8CCC8FA61AA4CE34000594B7 /* LaunchScreen.xib */,
@@ -221,6 +239,8 @@
 			files = (
 				8CCC8FA01AA4CE34000594B7 /* ViewController.m in Sources */,
 				8CCC8F9D1AA4CE34000594B7 /* AppDelegate.m in Sources */,
+				8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */,
+				8CCC8FC91AA4D777000594B7 /* TableViewController.m in Sources */,
 				8CCC8F9A1AA4CE34000594B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

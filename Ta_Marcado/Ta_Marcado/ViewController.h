@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MKAnnotation.h>
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
