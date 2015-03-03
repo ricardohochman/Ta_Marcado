@@ -79,7 +79,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="obH-gN-Ujl" kind="presentation" id="v3v-4X-1MQ"/>
+                                    <segue destination="obH-gN-Ujl" kind="presentation" identifier="marcados" id="v3v-4X-1MQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="379.5" y="235.49999999999997"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="RLx-Tj-kZf">
             <objects>
-                <viewController id="obH-gN-Ujl" sceneMemberID="viewController">
+                <viewController id="obH-gN-Ujl" customClass="TableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m7M-vI-36a"/>
                         <viewControllerLayoutGuide type="bottom" id="RQw-cx-94T"/>
@@ -137,12 +137,76 @@
                                     </items>
                                 </navigationBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bst-Vy-7O5">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listaEnd" id="Bst-Vy-7O5" customClass="CellViewController">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bst-Vy-7O5" id="f0G-9a-NDx">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-Kc-J99">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="127" id="fDM-cf-Cy1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="fDM-cf-Cy1"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="fDM-cf-Cy1"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jex-Ar-taa">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VVn-Kc-J99" firstAttribute="top" secondItem="f0G-9a-NDx" secondAttribute="topMargin" constant="3" id="KAf-7I-GSY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jex-Ar-taa" secondAttribute="trailing" constant="16" id="Oo3-fV-cB6"/>
+                                                <constraint firstItem="jex-Ar-taa" firstAttribute="leading" secondItem="VVn-Kc-J99" secondAttribute="trailing" constant="42" id="bmm-uP-fWI"/>
+                                                <constraint firstItem="jex-Ar-taa" firstAttribute="top" secondItem="f0G-9a-NDx" secondAttribute="topMargin" constant="3" id="cjb-2k-Shp"/>
+                                                <constraint firstItem="VVn-Kc-J99" firstAttribute="leading" secondItem="f0G-9a-NDx" secondAttribute="leadingMargin" constant="33" id="tg7-Th-LP3"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="VVn-Kc-J99"/>
+                                                    <exclude reference="jex-Ar-taa"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="KAf-7I-GSY"/>
+                                                    <exclude reference="tg7-Th-LP3"/>
+                                                    <exclude reference="Oo3-fV-cB6"/>
+                                                    <exclude reference="bmm-uP-fWI"/>
+                                                    <exclude reference="cjb-2k-Shp"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="VVn-Kc-J99"/>
+                                                    <include reference="jex-Ar-taa"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="KAf-7I-GSY"/>
+                                                    <include reference="tg7-Th-LP3"/>
+                                                    <include reference="Oo3-fV-cB6"/>
+                                                    <include reference="bmm-uP-fWI"/>
+                                                    <include reference="cjb-2k-Shp"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nome" destination="VVn-Kc-J99" id="rQa-tp-R9g"/>
+                                            <outlet property="rua" destination="jex-Ar-taa" id="pE1-Gh-HtQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -152,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9QZ-b3-tK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087.5" y="235.49999999999997"/>
+            <point key="canvasLocation" x="1087.5" y="234.75"/>
         </scene>
     </scenes>
 </document>

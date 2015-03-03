@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UITableViewController
+{
+    NSMutableArray *enderecos;
+    NSMutableArray *locais;
+
+}
+@property NSMutableArray *enderecos;
+@property NSMutableArray *locais;
+
 
 @end

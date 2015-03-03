@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CellViewController : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nome;
+@property (weak, nonatomic) IBOutlet UILabel *rua;
 
 @end
