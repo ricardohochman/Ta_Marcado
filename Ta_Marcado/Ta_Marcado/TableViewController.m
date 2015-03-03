@@ -17,8 +17,8 @@
     [super viewDidLoad];
     tableView.delegate = self;
     tableView.dataSource = self;
-    [locais addObjectsFromArray:@[@"Casa da Vivi", @"Casa do Ricardo"]];
-    [enderecos addObjectsFromArray:@[@"Rua Indiana", @"Avenida Angelica"]];
+    locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
+    enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
     self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0);
 }
 
@@ -44,6 +44,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CellViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"listaEnd" forIndexPath:indexPath];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"listaEnd"];//rever com os meninos !!!!!
+    }
     
     long row = [indexPath row];
     cell.nome.text = [locais objectAtIndex:row];
