@@ -16,10 +16,10 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapa;
 @property (retain) CLLocationManager *locationManager;
 @property NSArray *locations;
+@property NSMutableArray *pontos;
+
 - (IBAction)marcar:(id)sender;
 - (IBAction)localizacaoAtual:(id)sender;
 - (IBAction)tipoMapa:(id)sender;
 
-
 @end
-

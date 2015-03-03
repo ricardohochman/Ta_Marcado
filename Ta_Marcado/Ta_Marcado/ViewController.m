@@ -14,7 +14,7 @@
 @end
 
 @implementation ViewController
-@synthesize locationManager, mapa;
+@synthesize locationManager, mapa,pontos;
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
@@ -42,6 +42,7 @@
     
     
     
+    
 
 }
 
@@ -51,9 +52,12 @@
 }
 
 - (IBAction)marcar:(id)sender {
-    
-    
+    MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
+    pontolocal.coordinate = [[_locations lastObject]coordinate];
+    [mapa addAnnotation:pontolocal];
+    [pontos addObject :pontolocal];
 }
+
 
 - (IBAction)localizacaoAtual:(id)sender {
 //    CLLocationCoordinate2D loc = [[_locations lastObject]coordinate];

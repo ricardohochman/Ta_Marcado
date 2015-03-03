@@ -17,5 +17,6 @@
 
 @property NSMutableArray *enderecos;
 @property NSMutableArray *locais;
+- (IBAction)voltar:(id)sender;
 
 @end

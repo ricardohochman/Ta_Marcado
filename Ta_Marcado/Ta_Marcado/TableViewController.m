@@ -10,6 +10,7 @@
 #import "CellViewController.h"
 #import "ViewController.h"
 
+
 @implementation TableViewController
 @synthesize enderecos, locais, tableView;
 
@@ -19,7 +20,7 @@
     tableView.dataSource = self;
     locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
     enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
-    self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0);
+    //self.tableView.contentInset = UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,4 +107,7 @@
 //}
 
 
+- (IBAction)voltar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
