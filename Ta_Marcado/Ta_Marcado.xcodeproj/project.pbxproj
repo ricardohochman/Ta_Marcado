@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CA84F141AA62ECE003B4F06 /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA84F131AA62ECE003B4F06 /* PopupViewController.m */; };
+		8CA84F161AA62FC9003B4F06 /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA84F151AA62FC9003B4F06 /* popup.png */; };
 		8CCC8F9A1AA4CE34000594B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F991AA4CE34000594B7 /* main.m */; };
 		8CCC8F9D1AA4CE34000594B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F9C1AA4CE34000594B7 /* AppDelegate.m */; };
 		8CCC8FA01AA4CE34000594B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F9F1AA4CE34000594B7 /* ViewController.m */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8CA84F121AA62ECE003B4F06 /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopupViewController.h; path = ../PopupViewController.h; sourceTree = "<group>"; };
+		8CA84F131AA62ECE003B4F06 /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopupViewController.m; path = ../PopupViewController.m; sourceTree = "<group>"; };
+		8CA84F151AA62FC9003B4F06 /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popup.png; path = ../../../../popup.png; sourceTree = "<group>"; };
 		8CCC8F941AA4CE33000594B7 /* Ta_Marcado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ta_Marcado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCC8F981AA4CE34000594B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCC8F991AA4CE34000594B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		8CCC8F8B1AA4CE33000594B7 = {
 			isa = PBXGroup;
 			children = (
+				8CA84F151AA62FC9003B4F06 /* popup.png */,
 				8CCC8FBF1AA4D64D000594B7 /* MapKit.framework */,
 				8CCC8FBD1AA4D646000594B7 /* CoreLocation.framework */,
 				8CCC8F961AA4CE33000594B7 /* Ta_Marcado */,
@@ -108,6 +114,8 @@
 				B32A9ECB1AA5C86B009A262E /* TableViewController.m */,
 				8CCC8FC41AA4D737000594B7 /* CellViewController.h */,
 				8CCC8FC51AA4D737000594B7 /* CellViewController.m */,
+				8CA84F121AA62ECE003B4F06 /* PopupViewController.h */,
+				8CA84F131AA62ECE003B4F06 /* PopupViewController.m */,
 				8CCC8FA11AA4CE34000594B7 /* Main.storyboard */,
 				8CCC8FA41AA4CE34000594B7 /* Images.xcassets */,
 				8CCC8FA61AA4CE34000594B7 /* LaunchScreen.xib */,
@@ -222,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA84F161AA62FC9003B4F06 /* popup.png in Resources */,
 				8CCC8FA31AA4CE34000594B7 /* Main.storyboard in Resources */,
 				8CCC8FA81AA4CE34000594B7 /* LaunchScreen.xib in Resources */,
 				8CCC8FA51AA4CE34000594B7 /* Images.xcassets in Resources */,
@@ -247,6 +256,7 @@
 				8CCC8F9D1AA4CE34000594B7 /* AppDelegate.m in Sources */,
 				8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */,
 				8CCC8F9A1AA4CE34000594B7 /* main.m in Sources */,
+				8CA84F141AA62ECE003B4F06 /* PopupViewController.m in Sources */,
 				B32A9EC91AA4ED6C009A262E /* MapaPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,14 +2,16 @@
 //  ViewController.m
 //  Ta_Marcado
 //
-//  Created by Ricardo Hochman on 02/03/15.
-//  Copyright (c) 2015 Ricardo Hochman. All rights reserved.
+//  Created by Bruno Faganello, Ricardo Hochman, Vivian Chiodo on 02/03/15.
+//  Copyright (c) 2015 Bruno Faganello, Ricardo Hochman, Vivian Chiodo. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "MapaPoint.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    UIViewController *popLocalViewController;
+}
 
 @end
 
@@ -42,7 +44,8 @@
     
     
     
-    
+    //[self setModalPresentationStyle:UIModalPresentationCurrentContext];
+    [ViewController setPresentationStyleForSelfController:self presentingController:self];
 
 }
 
@@ -52,11 +55,28 @@
 }
 
 - (IBAction)marcar:(id)sender {
+    [locationManager startUpdatingLocation];
+    mapa.userTrackingMode = true;
     MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
     pontolocal.coordinate = [[_locations lastObject]coordinate];
     [mapa addAnnotation:pontolocal];
     [pontos addObject :pontolocal];
+    
+    if (!popLocalViewController) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        popLocalViewController = [mainStoryboard instantiateViewControllerWithIdentifier: @"popLocal"];
+    }
+    [self.view addSubview:popLocalViewController.view];
 }
+
++ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController {
+    presentingController.providesPresentationContextTransitionStyle = YES;
+    presentingController.definesPresentationContext = YES;
+    
+    [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    
+}
+
 
 
 - (IBAction)localizacaoAtual:(id)sender {
@@ -66,6 +86,8 @@
 //    [mapa setZoomEnabled:YES];
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
+  
+
     
 }
 
