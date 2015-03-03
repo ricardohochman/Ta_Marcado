@@ -15,8 +15,14 @@
 }
 - (IBAction)salvar:(id)sender {
 //    [self dismissViewControllerAnimated:YES completion:Nil];
+    
+    
+    _nome = _caixaTexto.text;
+    [[NSUserDefaults standardUserDefaults] setObject:_nome forKey:@"nomePin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self.view removeFromSuperview];
-
+    
 }
 
 

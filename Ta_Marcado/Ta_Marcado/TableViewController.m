@@ -21,6 +21,7 @@
     locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
     enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
     //self.tableView.contentInset = UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0);
+    
 }
 
 - (void)didReceiveMemoryWarning {

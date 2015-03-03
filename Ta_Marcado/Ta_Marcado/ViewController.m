@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MapaPoint.h"
+#import "PopupViewController.h"
 
 @interface ViewController () {
     UIViewController *popLocalViewController;
@@ -42,11 +43,22 @@
     [mapa addAnnotation:mp1];
     [mapa addAnnotation:mp2];
     
-    
-    
     //[self setModalPresentationStyle:UIModalPresentationCurrentContext];
     [ViewController setPresentationStyleForSelfController:self presentingController:self];
 
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    PopupViewController *pop = [[PopupViewController alloc] init];
+    NSString *pin = [[NSUserDefaults standardUserDefaults]stringForKey:@"nomePin"];
+    NSLog( @"%@",pin );
+    
+}
+-(void)viewDidLoad:(BOOL)animated{
+    PopupViewController *pop = [[PopupViewController alloc] init];
+    NSString *pin = [[NSUserDefaults standardUserDefaults]stringForKey:@"nomePin"];
+    NSLog( @"%@",pin );
+    
 }
 
 - (void)didReceiveMemoryWarning {
