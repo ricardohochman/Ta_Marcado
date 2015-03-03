@@ -112,6 +112,7 @@
         <!--Table View Controller-->
         <scene sceneID="RLx-Tj-kZf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QZ-b3-tK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="obH-gN-Ujl" customClass="TableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m7M-vI-36a"/>
@@ -209,12 +210,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-14" width="400" height="814"/>
+                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="dtf-vZ-xn8" id="RdV-oK-au1"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9QZ-b3-tK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1087.5" y="234.75"/>
         </scene>

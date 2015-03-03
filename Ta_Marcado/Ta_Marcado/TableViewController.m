@@ -11,10 +11,12 @@
 #import "ViewController.h"
 
 @implementation TableViewController
-@synthesize enderecos, locais;
+@synthesize enderecos, locais, tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    tableView.delegate = self;
+    tableView.dataSource = self;
     [locais addObjectsFromArray:@[@"Casa da Vivi", @"Casa do Ricardo"]];
     [enderecos addObjectsFromArray:@[@"Rua Indiana", @"Avenida Angelica"]];
     self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0);
