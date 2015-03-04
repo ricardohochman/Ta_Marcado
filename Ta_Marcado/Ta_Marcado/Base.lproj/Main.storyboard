@@ -29,7 +29,7 @@
                                 </state>
                                 <connections>
                                     <action selector="marcar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VrF-D7-0tO"/>
-                                    <segue destination="oT9-5h-7v2" kind="show" id="5Ah-bd-qfr"/>
+                                    <segue destination="oT9-5h-7v2" kind="show" id="15K-bG-FKt"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g04-QD-C62">

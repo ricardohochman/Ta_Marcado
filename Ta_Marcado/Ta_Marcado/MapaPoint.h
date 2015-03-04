@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <Mapkit/MKAnnotation.h>
 
-@interface MapaPoint : MKAnnotationView <MKAnnotation>
+@interface MapaPoint : NSObject <MKAnnotation>
 
 -(id) initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t end:(NSString *)e;
 

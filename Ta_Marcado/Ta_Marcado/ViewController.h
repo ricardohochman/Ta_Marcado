@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MKAnnotation.h>
+#import "MapaPoint.h"
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
@@ -21,5 +22,6 @@
 - (IBAction)marcar:(id)sender;
 - (IBAction)localizacaoAtual:(id)sender;
 - (IBAction)tipoMapa:(id)sender;
+-(void)marcarMapa:(MapaPoint *)mp;
 
 @end

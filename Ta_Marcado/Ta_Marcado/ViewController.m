@@ -17,6 +17,8 @@
 
 @implementation ViewController
 @synthesize locationManager, mapa, pontos;
+MapaPoint *mp;
+Singleton *s;
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
@@ -42,19 +44,15 @@
     [mapa addAnnotation:mp1];
     [mapa addAnnotation:mp2];
 }
-
--(void)viewDidAppear:(BOOL)animated {
-    PopupViewController *pop = [[PopupViewController alloc] init];
-    NSString *pin = [[NSUserDefaults standardUserDefaults]stringForKey:@"nomePin"];
-    NSLog( @"%@",pin );
-    
-}
--(void)viewDidLoad:(BOOL)animated{
-    PopupViewController *pop = [[PopupViewController alloc] init];
-    NSString *pin = [[NSUserDefaults standardUserDefaults]stringForKey:@"nomePin"];
-    NSLog( @"%@",pin );
-    
-}
+//-(void)viewWillAppear{
+//    s = [Singleton instance];
+//    if(s != nil){
+//        Singleton *s = [Singleton instance];
+//        MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
+//        mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:s.nome end:@"ola"];
+//        [mapa addAnnotation:mp];
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -62,18 +60,24 @@
 }
 
 - (IBAction)marcar:(id)sender {
-    Singleton *s = [[Singleton alloc]init];
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
-    [mapa setRegion:MKCoordinateRegionMake(mapa.userLocation.coordinate, MKCoordinateSpanMake(0.01f, 0.01f)) animated:YES];
+    Singleton *s = [Singleton instance];
     MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
     pontolocal.coordinate = [[_locations lastObject]coordinate];
-    
-    [pontos addObject :pontolocal];
-    MapaPoint *mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:[s.pontos objectAtIndex:0] end:@"avenida Teste 2"];
-    [mapa addAnnotation:mp];
+    s.pontolocal = pontolocal;
+//    mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:nome end:@"ola"];
+//    [mapa addAnnotation:mp];
     
 }
+-(void) viewDidAppear:(BOOL)animated{
+    s = [Singleton instance];
+//    NSLog(@"%@",s.mpoint.title);
+//    [s.locais addObject:s.mpoint.title];
+//    [s.enderecos addObject:@"obrigada omella"];
+    [mapa addAnnotation:s.mpoint];
+}
+
 
 
 - (IBAction)localizacaoAtual:(id)sender {

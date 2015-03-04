@@ -7,20 +7,23 @@
 //
 
 #import "PopupViewController.h"
+#import "ViewController.h"
 #import "Singleton.h"
 
-@implementation PopupViewController
 
+@implementation PopupViewController
+@synthesize mpoint;
 
 - (IBAction)salvar:(id)sender {
 //    [self dismissViewControllerAnimated:YES completion:Nil];
+    ViewController *vc = [[ViewController alloc]init];
+    Singleton *s = [Singleton instance];
+    s.nome = _caixaTexto.text;
     
-    
-    _nome = _caixaTexto.text;
-    [[NSUserDefaults standardUserDefaults] setObject:_nome forKey:@"nomePin"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    Singleton *s = [[Singleton alloc]init];
-    [s.pontos addObject:_nome];
+    NSLog(@"pontolocal: %@", s.nome);
+    MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:@"ola"];
+    s.mpoint = mpoint;
+    //[vc marcarMapa:mpoint];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

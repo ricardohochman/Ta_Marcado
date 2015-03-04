@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import "MapaPoint.h"
 
-@interface Singleton : NSObject
+@interface Singleton : NSObject{
+    
+}
 @property NSMutableArray *pontos;
+@property NSMutableArray *enderecos;
+@property NSMutableArray *locais;
+@property NSString *nome;
+@property MKPointAnnotation *pontolocal;
+@property MapaPoint *mpoint;
 
-+(Singleton *)init;
+
++(Singleton *)instance;
 
 @end

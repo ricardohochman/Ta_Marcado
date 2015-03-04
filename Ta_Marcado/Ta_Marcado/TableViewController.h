@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Singleton.h"
 
 @interface TableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSMutableArray *enderecos;
-    NSMutableArray *locais;
+    Singleton *s;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property NSMutableArray *enderecos;
-@property NSMutableArray *locais;
+@property Singleton *s;
 - (IBAction)voltar:(id)sender;
 
 @end

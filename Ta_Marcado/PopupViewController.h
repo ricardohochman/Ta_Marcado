@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapaPoint.h"
 
 @interface PopupViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *caixaTexto;
 @property NSString *nome;
+@property MapaPoint *mpoint;
 
 @end

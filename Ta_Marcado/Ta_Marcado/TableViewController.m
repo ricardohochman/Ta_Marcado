@@ -12,15 +12,20 @@
 
 
 @implementation TableViewController
-@synthesize enderecos, locais, tableView;
+@synthesize tableView,s;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    s = [[Singleton alloc ]init];
+    
+    
     tableView.delegate = self;
     tableView.dataSource = self;
-    locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
-    enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
+    s.locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
+    s.enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
     //self.tableView.contentInset = UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0);
+    
     
 }
 
@@ -40,7 +45,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return locais.count;
+    return s.locais.count;
 }
 
 
@@ -51,8 +56,8 @@
     }
     
     long row = [indexPath row];
-    cell.nome.text = [locais objectAtIndex:row];
-    cell.rua.text = [enderecos objectAtIndex:row];
+    cell.nome.text = [s.locais objectAtIndex:row];
+    cell.rua.text = [s.enderecos objectAtIndex:row];
     return cell;
 }
 

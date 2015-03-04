@@ -9,16 +9,26 @@
 #import "Singleton.h"
 
 @implementation Singleton
-@synthesize pontos;
+@synthesize pontos,locais,enderecos, nome, pontolocal, mpoint;
 
+static Singleton *instancia = nil;
 
-+(Singleton *)init{
-    static Singleton *instancia = nil;
++(Singleton *)instance{
     if(!instancia)
     {
-        instancia = [[super allocWithZone:nil]init];
+        instancia = [[super alloc]init];
     }
     return instancia;
+}
+-(instancetype) init {
+    self = [super init];
+    if (self) {
+        locais = [[NSMutableArray alloc]init];
+        enderecos = [[NSMutableArray alloc]init];
+        pontos = [[NSMutableArray alloc]init];
+        
+    }
+    return self;
 }
 
 @end

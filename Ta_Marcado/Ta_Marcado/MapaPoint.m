@@ -33,4 +33,12 @@
     return av;
 }
 
+-(void)setTitle:(NSString *)t{
+    title = t;
+}
+
+-(void)setSubtitle:(NSString *)sub{
+    subtitle = sub;
+}
+
 @end
