@@ -69,6 +69,7 @@
 - (IBAction)marcar:(id)sender {
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
+    [mapa setRegion:MKCoordinateRegionMake(mapa.userLocation.coordinate, MKCoordinateSpanMake(0.01f, 0.01f)) animated:YES];
     MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
     pontolocal.coordinate = [[_locations lastObject]coordinate];
     [mapa addAnnotation:pontolocal];
@@ -98,7 +99,8 @@
 //    [mapa setZoomEnabled:YES];
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
-  
+    [mapa setRegion:MKCoordinateRegionMake(mapa.userLocation.coordinate, MKCoordinateSpanMake(0.01f, 0.01f)) animated:YES];
+
 
     
 }

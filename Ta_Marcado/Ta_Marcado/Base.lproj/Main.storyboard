@@ -84,16 +84,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-q7-7at">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BrI-ak-csA" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="85e-qz-Mdd"/>
                             <constraint firstItem="g04-QD-C62" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="16" id="FJB-eC-o5D"/>
                             <constraint firstItem="uMs-SJ-nyv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Lgx-Yf-z8Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rHr-q7-7at" secondAttribute="trailing" constant="10" id="Qfz-hB-vEu"/>
                             <constraint firstItem="Pgq-KP-8Dl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="QpF-MX-j5x"/>
                             <constraint firstAttribute="centerX" secondItem="g04-QD-C62" secondAttribute="centerX" id="UAu-k9-aYQ"/>
                             <constraint firstItem="uMs-SJ-nyv" firstAttribute="top" secondItem="g04-QD-C62" secondAttribute="bottom" constant="19" id="W2F-nW-Sn4"/>
+                            <constraint firstItem="BrI-ak-csA" firstAttribute="top" secondItem="rHr-q7-7at" secondAttribute="bottom" constant="50" id="bsb-w1-gSy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMs-SJ-nyv" secondAttribute="trailing" constant="-16" id="btu-dw-EH1"/>
+                            <constraint firstItem="rHr-q7-7at" firstAttribute="top" secondItem="g04-QD-C62" secondAttribute="bottom" constant="372" id="dVj-Jy-sbj"/>
+                            <constraint firstItem="rHr-q7-7at" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="264" id="dYo-oV-reO"/>
+                            <constraint firstItem="Pgq-KP-8Dl" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="eTG-H2-Kr0"/>
                             <constraint firstItem="BrI-ak-csA" firstAttribute="leading" secondItem="Pgq-KP-8Dl" secondAttribute="trailing" constant="32" id="gon-67-s09"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fW1-Go-bxw" secondAttribute="bottom" id="jCC-VL-fVA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fW1-Go-bxw" secondAttribute="trailing" constant="-16" id="nRc-hx-d9a"/>
@@ -101,6 +109,31 @@
                             <constraint firstItem="Pgq-KP-8Dl" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="td3-cb-bNm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BrI-ak-csA" secondAttribute="trailing" constant="48" id="wRz-Hc-tdM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rHr-q7-7at"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Qfz-hB-vEu"/>
+                                <exclude reference="dVj-Jy-sbj"/>
+                                <exclude reference="dYo-oV-reO"/>
+                                <exclude reference="eTG-H2-Kr0"/>
+                                <exclude reference="bsb-w1-gSy"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rHr-q7-7at"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Qfz-hB-vEu"/>
+                                <include reference="dVj-Jy-sbj"/>
+                                <include reference="dYo-oV-reO"/>
+                                <include reference="eTG-H2-Kr0"/>
+                                <exclude reference="td3-cb-bNm"/>
+                                <include reference="bsb-w1-gSy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="logo" destination="g04-QD-C62" id="rWb-ei-7ca"/>
@@ -266,7 +299,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup.png" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-Vo-rZW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-Vo-rZW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="408" height="812"/>
@@ -324,6 +357,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="popup.png" width="320" height="460"/>
+        <image name="popup" width="320" height="460"/>
     </resources>
 </document>
