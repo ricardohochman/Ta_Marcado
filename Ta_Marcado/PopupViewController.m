@@ -7,6 +7,7 @@
 //
 
 #import "PopupViewController.h"
+#import "Singleton.h""
 
 @implementation PopupViewController
 
@@ -20,6 +21,7 @@
     _nome = _caixaTexto.text;
     [[NSUserDefaults standardUserDefaults] setObject:_nome forKey:@"nomePin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    Singleton *s = [[Singleton alloc]init];
     
     [self.view removeFromSuperview];
     

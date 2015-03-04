@@ -11,4 +11,6 @@
 @interface Singleton : NSObject
 @property NSMutableArray *pontos;
 
++(Singleton *)init;
+
 @end

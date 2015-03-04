@@ -9,5 +9,16 @@
 #import "Singleton.h"
 
 @implementation Singleton
+@synthesize pontos;
+
+
++(Singleton *)init{
+    static Singleton *instancia = nil;
+    if(!instancia)
+    {
+        instancia = [[super allocWithZone:nil]init];
+    }
+    return instancia;
+}
 
 @end
