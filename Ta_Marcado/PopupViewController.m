@@ -22,7 +22,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:_nome forKey:@"nomePin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     Singleton *s = [[Singleton alloc]init];
-    
+    [s.pontos addObject:_nome];
+
     [self.view removeFromSuperview];
     
 }

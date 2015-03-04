@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MapaPoint.h"
 #import "PopupViewController.h"
+#import "Singleton.h"
 
 @interface ViewController () {
     UIViewController *popLocalViewController;
@@ -17,7 +18,7 @@
 @end
 
 @implementation ViewController
-@synthesize locationManager, mapa,pontos;
+@synthesize locationManager, mapa, pontos;
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
@@ -67,12 +68,15 @@
 }
 
 - (IBAction)marcar:(id)sender {
+    Singleton *s = [[Singleton alloc]init];
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
     MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
     pontolocal.coordinate = [[_locations lastObject]coordinate];
-    [mapa addAnnotation:pontolocal];
+    
     [pontos addObject :pontolocal];
+    MapaPoint *mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:[s.pontos objectAtIndex:0] end:@"avenida Teste 2"];
+    [mapa addAnnotation:mp];
     
     if (!popLocalViewController) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
