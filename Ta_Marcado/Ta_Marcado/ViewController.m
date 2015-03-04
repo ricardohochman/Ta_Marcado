@@ -11,9 +11,7 @@
 #import "PopupViewController.h"
 #import "Singleton.h"
 
-@interface ViewController () {
-    UIViewController *popLocalViewController;
-}
+@interface ViewController ()
 
 @end
 
@@ -43,10 +41,6 @@
     MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
     [mapa addAnnotation:mp1];
     [mapa addAnnotation:mp2];
-    
-    //[self setModalPresentationStyle:UIModalPresentationCurrentContext];
-    [ViewController setPresentationStyleForSelfController:self presentingController:self];
-
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -81,27 +75,11 @@
     
 }
 
-+ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController {
-    presentingController.providesPresentationContextTransitionStyle = YES;
-    presentingController.definesPresentationContext = YES;
-    
-    [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    
-}
-
-
 
 - (IBAction)localizacaoAtual:(id)sender {
-//    CLLocationCoordinate2D loc = [[_locations lastObject]coordinate];
-//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
-//    [mapa setRegion:region animated:YES];
-//    [mapa setZoomEnabled:YES];
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
     [mapa setRegion:MKCoordinateRegionMake(mapa.userLocation.coordinate, MKCoordinateSpanMake(0.01f, 0.01f)) animated:YES];
-
-
-    
 }
 
 - (IBAction)tipoMapa:(id)sender {
