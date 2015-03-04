@@ -31,4 +31,8 @@ static Singleton *instancia = nil;
     return self;
 }
 
+-(void)addLocal:(MapaPoint *)mp{
+    [locais addObject:mp.title];
+    [enderecos addObject:@"qualquer coisa"];
+}
 @end

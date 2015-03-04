@@ -72,7 +72,7 @@ Singleton *s;
 }
 -(void) viewDidAppear:(BOOL)animated{
     s = [Singleton instance];
-//    NSLog(@"%@",s.mpoint.title);
+////    NSLog(@"%@",s.mpoint.title);
 //    [s.locais addObject:s.mpoint.title];
 //    [s.enderecos addObject:@"obrigada omella"];
     [mapa addAnnotation:s.mpoint];

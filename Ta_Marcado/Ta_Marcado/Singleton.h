@@ -22,5 +22,6 @@
 
 
 +(Singleton *)instance;
+-(void)addLocal:(MapaPoint *)mp;
 
 @end

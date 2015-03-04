@@ -22,6 +22,5 @@
 - (IBAction)marcar:(id)sender;
 - (IBAction)localizacaoAtual:(id)sender;
 - (IBAction)tipoMapa:(id)sender;
--(void)marcarMapa:(MapaPoint *)mp;
 
 @end

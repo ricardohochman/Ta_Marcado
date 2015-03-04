@@ -23,6 +23,8 @@
     NSLog(@"pontolocal: %@", s.nome);
     MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:@"ola"];
     s.mpoint = mpoint;
+    [s addLocal:mpoint];
+    
     //[vc marcarMapa:mpoint];
     
     [self dismissViewControllerAnimated:YES completion:nil];
