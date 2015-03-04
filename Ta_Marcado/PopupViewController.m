@@ -7,13 +7,11 @@
 //
 
 #import "PopupViewController.h"
-#import "Singleton.h""
+#import "Singleton.h"
 
 @implementation PopupViewController
 
--(void)viewDidLoad {
-    [self.view setBackgroundColor: [UIColor clearColor]];
-}
+
 - (IBAction)salvar:(id)sender {
 //    [self dismissViewControllerAnimated:YES completion:Nil];
     
@@ -23,9 +21,8 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     Singleton *s = [[Singleton alloc]init];
     [s.pontos addObject:_nome];
-
-    [self.view removeFromSuperview];
     
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

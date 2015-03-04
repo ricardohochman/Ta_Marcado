@@ -79,11 +79,6 @@
     MapaPoint *mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:[s.pontos objectAtIndex:0] end:@"avenida Teste 2"];
     [mapa addAnnotation:mp];
     
-    if (!popLocalViewController) {
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-        popLocalViewController = [mainStoryboard instantiateViewControllerWithIdentifier: @"popLocal"];
-    }
-    [self.view addSubview:popLocalViewController.view];
 }
 
 + (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController {
