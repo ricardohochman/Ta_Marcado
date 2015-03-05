@@ -58,31 +58,13 @@
 - (IBAction)marcar:(id)sender {
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
-    
-//    MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
-//    pontolocal.coordinate = [[locations lastObject]coordinate];
-//    s.novoLocal = pontolocal;
-    
     s.novoLocal = [[MapaPoint alloc] initWithCoordinate:[[locations lastObject] coordinate] nome:@"" end:@"buscando!"];
 }
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.destinationViewController isKindOfClass:[PopupViewController class]]) {
-//        PopupViewController *destination = [segue destinationViewController];
-//        [destination setDelegate:self];
-//    }
-//}
 
 -(void) viewDidAppear:(BOOL)animated{
-//    s = [LocaisSingleton instance];
-////    NSLog(@"%@",s.mpoint.title);
-//    [s.locais addObject:s.mpoint.title];
-//    [s.enderecos addObject:@"obrigada omella"];
-//    NSLog(@"end: %@", s.subTitulo);
-//
-//    [mapa addAnnotation:s.mpoint];
     if (s.novoLocal) {
-        [mapa addAnnotation:s.novoLocal];
+        [s.novoLocal adicionarPin:mapa];
         s.novoLocal = nil;
     }
 }
@@ -114,6 +96,8 @@
     }
 
 }
+
+
 - (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)newLocations
 {
     locations = newLocations;

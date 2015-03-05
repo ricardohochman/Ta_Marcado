@@ -11,7 +11,5 @@
 
 @interface PopupViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *caixaTexto;
-//@property NSString *nome;
-//@property MapaPoint *mpoint;
 
 @end

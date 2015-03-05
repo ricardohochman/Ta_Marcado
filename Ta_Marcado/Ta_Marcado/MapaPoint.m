@@ -21,32 +21,27 @@
     return self;
 }
 
-//-(MKAnnotationView *)annotationView{
-//    MKAnnotationView *av = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"MyCustomAnnotation"];
-//    
-//    av.enabled = YES;
-//    av.canShowCallout = YES;
-//    av.image = [UIImage imageNamed:@"pin.png"];
-//    av.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//    
-//    return av;
-//}
+
+-(NSString *)title {
+    return self.nome;
+}
+
+-(NSString *)subtitle {
+    return self.endereco;
+}
 
 
-
--(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
-    self.coordinate = newCoordinate;
-    
+-(void) adicionarPin:(MKMapView *)mapa {
     CLGeocoder *geo = [[CLGeocoder alloc]init];
     CLLocation *aux = [[CLLocation alloc]initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
-    [self setEndereco:@"buscando..."];
     [geo reverseGeocodeLocation:aux completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error==nil) {
             CLPlacemark *placemark = [placemarks lastObject];
-            [self setEndereco:placemark.subThoroughfare];
+            [self setEndereco:placemark.thoroughfare];
         } else {
             [self setEndereco:@"Não encontrado"];
         }
+        [mapa addAnnotation:self];
     }];
 }
 

@@ -19,4 +19,6 @@
 @property (nonatomic, copy) NSString *nome;
 @property (nonatomic, copy) NSString *endereco;
 
+-(void) adicionarPin:(MKMapView *)mapa;
+
 @end
