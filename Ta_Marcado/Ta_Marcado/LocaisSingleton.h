@@ -10,19 +10,19 @@
 #import <MapKit/MapKit.h>
 #import "MapaPoint.h"
 
-@interface Singleton : NSObject{
+@interface LocaisSingleton : NSObject{
     
 }
-@property NSMutableArray *pontos;
-@property NSMutableArray *enderecos;
+//@property NSMutableArray *pontos;
+//@property NSMutableArray *enderecos;
 @property NSMutableArray *locais;
-@property NSString *nome;
-@property NSString *subTitulo;
-@property MKPointAnnotation *pontolocal;
-@property MapaPoint *mpoint;
+//@property NSString *nome;
+//@property NSString *subTitulo;
+@property MapaPoint *novoLocal;
+//@property MapaPoint *mpoint;
 
 
-+(Singleton *)instance;
++(LocaisSingleton *)instance;
 -(void)addLocal:(MapaPoint *)mp;
 
 @end

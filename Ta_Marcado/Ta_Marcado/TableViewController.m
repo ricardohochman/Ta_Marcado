@@ -17,13 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    s = [[Singleton alloc ]init];
+    s = [[LocaisSingleton alloc ]init];
     
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    s.locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
-    s.enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
+//    s.locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
+//    s.enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
     //self.tableView.contentInset = UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0);
     
     
@@ -56,8 +56,9 @@
     }
     
     long row = [indexPath row];
-    cell.nome.text = [s.locais objectAtIndex:row];
-    cell.rua.text = [s.enderecos objectAtIndex:row];
+    MapaPoint *ponto = [s.locais objectAtIndex:row];
+    cell.nome.text = [ponto nome];
+    cell.rua.text = [ponto endereco];
     return cell;
 }
 

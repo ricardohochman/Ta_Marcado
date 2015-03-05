@@ -13,10 +13,10 @@
 
 @interface MapaPoint : NSObject <MKAnnotation>
 
--(id) initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t end:(NSString *)e;
+-(id) initWithCoordinate:(CLLocationCoordinate2D)c nome:(NSString *)n end:(NSString *)e;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *subtitle;
+@property (nonatomic, copy) NSString *nome;
+@property (nonatomic, copy) NSString *endereco;
 
 @end

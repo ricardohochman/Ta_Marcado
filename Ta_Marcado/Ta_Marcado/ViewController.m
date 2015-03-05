@@ -9,16 +9,20 @@
 #import "ViewController.h"
 #import "MapaPoint.h"
 #import "PopupViewController.h"
-#import "Singleton.h"
+#import "LocaisSingleton.h"
 
 @interface ViewController ()
+{
+    NSArray *locations;
+    MapaPoint *mp;
+    LocaisSingleton *s;
+}
 
 @end
 
 @implementation ViewController
-@synthesize locationManager, mapa, pontos;
-MapaPoint *mp;
-Singleton *s;
+@synthesize locationManager, mapa;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc]init];
@@ -29,6 +33,7 @@ Singleton *s;
     }
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
+    s = [LocaisSingleton instance];
     
 //    
 //    MKCoordinateRegion coord1 = {{0.0, 0.0},{0.0, 0.0}};
@@ -53,25 +58,33 @@ Singleton *s;
 - (IBAction)marcar:(id)sender {
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
-    Singleton *s = [Singleton instance];
-    MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
-    pontolocal.coordinate = [[_locations lastObject]coordinate];
     
-    s.pontolocal = pontolocal;
+//    MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
+//    pontolocal.coordinate = [[locations lastObject]coordinate];
+//    s.novoLocal = pontolocal;
+    
+    s.novoLocal = [[MapaPoint alloc] initWithCoordinate:[[locations lastObject] coordinate] nome:@"" end:@"buscando!"];
 }
 
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.destinationViewController isKindOfClass:[PopupViewController class]]) {
+//        PopupViewController *destination = [segue destinationViewController];
+//        [destination setDelegate:self];
+//    }
+//}
+
 -(void) viewDidAppear:(BOOL)animated{
-    s = [Singleton instance];
+//    s = [LocaisSingleton instance];
 ////    NSLog(@"%@",s.mpoint.title);
 //    [s.locais addObject:s.mpoint.title];
 //    [s.enderecos addObject:@"obrigada omella"];
-    NSLog(@"end: %@", s.subTitulo);
-    MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:s.subTitulo];
-    s.mpoint = mpoint;
-    [s addLocal:mpoint];
-
-    [mapa addAnnotation:s.mpoint];
-    
+//    NSLog(@"end: %@", s.subTitulo);
+//
+//    [mapa addAnnotation:s.mpoint];
+    if (s.novoLocal) {
+        [mapa addAnnotation:s.novoLocal];
+        s.novoLocal = nil;
+    }
 }
 
 
@@ -101,9 +114,9 @@ Singleton *s;
     }
 
 }
-- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations
+- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)newLocations
 {
-    _locations = locations;
+    locations = newLocations;
 }
 
 

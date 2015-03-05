@@ -9,36 +9,45 @@
 #import "MapaPoint.h"
 
 @implementation MapaPoint
-@synthesize coordinate, title, subtitle;
+@synthesize coordinate, nome, endereco;
 
--(id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t end:(NSString *)e{
+-(id)initWithCoordinate:(CLLocationCoordinate2D)c nome:(NSString *)n end:(NSString *)e{
     self = [super init];
     if(self){
         coordinate = c;
-        [self setTitle:t];
-         subtitle = e;
-        ;
+        nome = n;
+        endereco = e;
     }
     return self;
 }
 
--(MKAnnotationView *)annotationView{
-    MKAnnotationView *av = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"MyCustomAnnotation"];
-    
-    av.enabled = YES;
-    av.canShowCallout = YES;
-    av.image = [UIImage imageNamed:@"pin.png"];
-    av.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    
-    return av;
-}
+//-(MKAnnotationView *)annotationView{
+//    MKAnnotationView *av = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"MyCustomAnnotation"];
+//    
+//    av.enabled = YES;
+//    av.canShowCallout = YES;
+//    av.image = [UIImage imageNamed:@"pin.png"];
+//    av.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//    
+//    return av;
+//}
 
--(void)setTitle:(NSString *)t{
-    title = t;
-}
 
--(void)setSubtitle:(NSString *)sub{
-    subtitle = sub;
+
+-(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
+    self.coordinate = newCoordinate;
+    
+    CLGeocoder *geo = [[CLGeocoder alloc]init];
+    CLLocation *aux = [[CLLocation alloc]initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
+    [self setEndereco:@"buscando..."];
+    [geo reverseGeocodeLocation:aux completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error==nil) {
+            CLPlacemark *placemark = [placemarks lastObject];
+            [self setEndereco:placemark.subThoroughfare];
+        } else {
+            [self setEndereco:@"Não encontrado"];
+        }
+    }];
 }
 
 @end

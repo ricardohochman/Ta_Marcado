@@ -16,8 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet MKMapView *mapa;
 @property (retain) CLLocationManager *locationManager;
-@property NSArray *locations;
-@property NSMutableArray *pontos;
+//@property NSMutableArray *pontos;
 
 
 - (IBAction)marcar:(id)sender;

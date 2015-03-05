@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		51CB31351AA78D3200E958AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CB31331AA78D3200E958AA /* Main.storyboard */; };
 		8CA84F141AA62ECE003B4F06 /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA84F131AA62ECE003B4F06 /* PopupViewController.m */; };
-		8CA84F191AA64D30003B4F06 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA84F181AA64D30003B4F06 /* Singleton.m */; };
+		8CA84F191AA64D30003B4F06 /* LocaisSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA84F181AA64D30003B4F06 /* LocaisSingleton.m */; };
 		8CCC8F9A1AA4CE34000594B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F991AA4CE34000594B7 /* main.m */; };
 		8CCC8F9D1AA4CE34000594B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F9C1AA4CE34000594B7 /* AppDelegate.m */; };
 		8CCC8FA01AA4CE34000594B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC8F9F1AA4CE34000594B7 /* ViewController.m */; };
@@ -37,8 +37,8 @@
 		51CB31341AA78D3200E958AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CA84F121AA62ECE003B4F06 /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopupViewController.h; path = ../PopupViewController.h; sourceTree = "<group>"; };
 		8CA84F131AA62ECE003B4F06 /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopupViewController.m; path = ../PopupViewController.m; sourceTree = "<group>"; };
-		8CA84F171AA64D30003B4F06 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		8CA84F181AA64D30003B4F06 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		8CA84F171AA64D30003B4F06 /* LocaisSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocaisSingleton.h; sourceTree = "<group>"; };
+		8CA84F181AA64D30003B4F06 /* LocaisSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocaisSingleton.m; sourceTree = "<group>"; };
 		8CCC8F941AA4CE33000594B7 /* Ta_Marcado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ta_Marcado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCC8F981AA4CE34000594B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCC8F991AA4CE34000594B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 				8CCC8F9F1AA4CE34000594B7 /* ViewController.m */,
 				B32A9EC71AA4ED6C009A262E /* MapaPoint.h */,
 				B32A9EC81AA4ED6C009A262E /* MapaPoint.m */,
-				8CA84F171AA64D30003B4F06 /* Singleton.h */,
-				8CA84F181AA64D30003B4F06 /* Singleton.m */,
+				8CA84F171AA64D30003B4F06 /* LocaisSingleton.h */,
+				8CA84F181AA64D30003B4F06 /* LocaisSingleton.m */,
 				B32A9ECA1AA5C86B009A262E /* TableViewController.h */,
 				B32A9ECB1AA5C86B009A262E /* TableViewController.m */,
 				8CCC8FC41AA4D737000594B7 /* CellViewController.h */,
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CCC8FA01AA4CE34000594B7 /* ViewController.m in Sources */,
-				8CA84F191AA64D30003B4F06 /* Singleton.m in Sources */,
+				8CA84F191AA64D30003B4F06 /* LocaisSingleton.m in Sources */,
 				B32A9ECC1AA5C86B009A262E /* TableViewController.m in Sources */,
 				8CCC8F9D1AA4CE34000594B7 /* AppDelegate.m in Sources */,
 				8CCC8FC61AA4D737000594B7 /* CellViewController.m in Sources */,

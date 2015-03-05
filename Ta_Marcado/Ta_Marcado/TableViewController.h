@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
+#import "LocaisSingleton.h"
 
 @interface TableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    Singleton *s;
+    LocaisSingleton *s;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property Singleton *s;
+@property LocaisSingleton *s;
 - (IBAction)voltar:(id)sender;
 
 @end
