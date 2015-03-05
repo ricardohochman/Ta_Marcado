@@ -37,7 +37,10 @@
     [geo reverseGeocodeLocation:aux completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error==nil) {
             CLPlacemark *placemark = [placemarks lastObject];
-            [self setEndereco:placemark.thoroughfare];
+            NSString *newString = [placemark.thoroughfare stringByAppendingString:@", "];
+            NSString *newnewString = [newString stringByAppendingString:placemark.subThoroughfare];
+            [self setEndereco: newnewString];
+            
         } else {
             [self setEndereco:@"Não encontrado"];
         }
