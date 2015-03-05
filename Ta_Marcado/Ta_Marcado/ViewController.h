@@ -19,6 +19,7 @@
 @property NSArray *locations;
 @property NSMutableArray *pontos;
 
+
 - (IBAction)marcar:(id)sender;
 - (IBAction)localizacaoAtual:(id)sender;
 - (IBAction)tipoMapa:(id)sender;

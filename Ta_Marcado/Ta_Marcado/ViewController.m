@@ -30,29 +30,20 @@ Singleton *s;
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;
     
-    
-    MKCoordinateRegion coord1 = {{0.0, 0.0},{0.0, 0.0}};
-    coord1.center.latitude = -23.5376830;
-    coord1.center.longitude = -46.6546540;
-    
-    MapaPoint *mp1 = [[MapaPoint alloc] initWithCoordinate:coord1.center title:@"Teste 1" end:@"avenida Teste 1"];
-    
-    MKCoordinateRegion coord2 = {{0.0, 0.0},{0.0, 0.0}};
-    coord2.center.latitude = -23.5370830;
-    coord2.center.longitude = -46.6546540;
-    MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
-    [mapa addAnnotation:mp1];
-    [mapa addAnnotation:mp2];
+//    
+//    MKCoordinateRegion coord1 = {{0.0, 0.0},{0.0, 0.0}};
+//    coord1.center.latitude = -23.5376830;
+//    coord1.center.longitude = -46.6546540;
+//    
+//    MapaPoint *mp1 = [[MapaPoint alloc] initWithCoordinate:coord1.center title:@"Teste 1" end:@"avenida Teste 1"];
+//    
+//    MKCoordinateRegion coord2 = {{0.0, 0.0},{0.0, 0.0}};
+//    coord2.center.latitude = -23.5370830;
+//    coord2.center.longitude = -46.6546540;
+//    MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
+//    [mapa addAnnotation:mp1];
+//    [mapa addAnnotation:mp2];
 }
-//-(void)viewWillAppear{
-//    s = [Singleton instance];
-//    if(s != nil){
-//        Singleton *s = [Singleton instance];
-//        MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
-//        mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:s.nome end:@"ola"];
-//        [mapa addAnnotation:mp];
-//    }
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -65,17 +56,22 @@ Singleton *s;
     Singleton *s = [Singleton instance];
     MKPointAnnotation *pontolocal = [[MKPointAnnotation alloc]init];
     pontolocal.coordinate = [[_locations lastObject]coordinate];
-    s.pontolocal = pontolocal;
-//    mp = [[MapaPoint alloc] initWithCoordinate:pontolocal.coordinate title:nome end:@"ola"];
-//    [mapa addAnnotation:mp];
     
+    s.pontolocal = pontolocal;
 }
+
 -(void) viewDidAppear:(BOOL)animated{
     s = [Singleton instance];
 ////    NSLog(@"%@",s.mpoint.title);
 //    [s.locais addObject:s.mpoint.title];
 //    [s.enderecos addObject:@"obrigada omella"];
+    NSLog(@"end: %@", s.subTitulo);
+    MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:s.subTitulo];
+    s.mpoint = mpoint;
+    [s addLocal:mpoint];
+
     [mapa addAnnotation:s.mpoint];
+    
 }
 
 

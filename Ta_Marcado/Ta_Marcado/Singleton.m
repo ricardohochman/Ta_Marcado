@@ -9,7 +9,7 @@
 #import "Singleton.h"
 
 @implementation Singleton
-@synthesize pontos,locais,enderecos, nome, pontolocal, mpoint;
+@synthesize pontos,locais,enderecos, nome, pontolocal, mpoint, subTitulo;
 
 static Singleton *instancia = nil;
 
@@ -33,6 +33,6 @@ static Singleton *instancia = nil;
 
 -(void)addLocal:(MapaPoint *)mp{
     [locais addObject:mp.title];
-    [enderecos addObject:@"qualquer coisa"];
+    [enderecos addObject:mp.subtitle];
 }
 @end

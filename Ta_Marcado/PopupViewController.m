@@ -11,21 +11,32 @@
 #import "Singleton.h"
 
 
+
 @implementation PopupViewController
 @synthesize mpoint;
 
 - (IBAction)salvar:(id)sender {
-//    [self dismissViewControllerAnimated:YES completion:Nil];
-    ViewController *vc = [[ViewController alloc]init];
     Singleton *s = [Singleton instance];
     s.nome = _caixaTexto.text;
     
     NSLog(@"pontolocal: %@", s.nome);
-    MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:@"ola"];
-    s.mpoint = mpoint;
-    [s addLocal:mpoint];
     
-    //[vc marcarMapa:mpoint];
+    CLGeocoder *geo = [[CLGeocoder alloc]init];
+    CLLocation *aux = [[CLLocation alloc]initWithLatitude:s.pontolocal.coordinate.latitude longitude:s.pontolocal.coordinate.longitude];
+    [geo reverseGeocodeLocation:aux completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error==nil) {
+            CLPlacemark *placemark = [placemarks lastObject];
+            s.subTitulo = placemark.subThoroughfare;
+            
+//            NSLog(@"end: %@", s.subTitulo);
+//            MapaPoint *mpoint = [[MapaPoint alloc] initWithCoordinate:s.pontolocal.coordinate title:s.nome end:s.subTitulo];
+//            s.mpoint = mpoint;
+//            [s addLocal:mpoint];
+            
+            
+            
+        }
+    }];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

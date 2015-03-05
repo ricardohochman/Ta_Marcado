@@ -17,6 +17,7 @@
 @property NSMutableArray *enderecos;
 @property NSMutableArray *locais;
 @property NSString *nome;
+@property NSString *subTitulo;
 @property MKPointAnnotation *pontolocal;
 @property MapaPoint *mpoint;
 
