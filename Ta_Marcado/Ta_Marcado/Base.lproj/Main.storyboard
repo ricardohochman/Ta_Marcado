@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgq-KP-8Dl">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgq-KP-8Dl">
                                 <rect key="frame" x="64" y="537" width="120" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="2nj-Mp-dTw"/>
@@ -49,7 +49,7 @@
                                     <segue destination="oT9-5h-7v2" kind="show" id="15K-bG-FKt"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-SJ-nyv">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-SJ-nyv">
                                 <rect key="frame" x="0.0" y="105" width="400" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="489" id="2is-AE-aMZ"/>
@@ -77,7 +77,7 @@
                                     </mask>
                                 </variation>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrI-ak-csA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrI-ak-csA">
                                 <rect key="frame" x="216" y="537" width="120" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="b2d-zJ-wEr"/>
@@ -158,21 +158,21 @@
                                 <exclude reference="rHr-q7-7at"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BlY-gH-dyh"/>
                                 <exclude reference="0ek-Nc-nTx"/>
                                 <exclude reference="F6x-wb-Xlo"/>
                                 <exclude reference="Sli-1e-fqo"/>
-                                <exclude reference="BlY-gH-dyh"/>
                                 <exclude reference="Dmp-ES-VOd"/>
                                 <exclude reference="H8h-N4-sLa"/>
                                 <exclude reference="tYo-2p-yh0"/>
+                                <exclude reference="0JM-yn-khr"/>
+                                <exclude reference="q0w-n5-958"/>
+                                <exclude reference="w59-fW-XZY"/>
                                 <exclude reference="1KL-M2-ghe"/>
                                 <exclude reference="2qn-Nv-wlc"/>
                                 <exclude reference="Kqj-PS-cec"/>
                                 <exclude reference="Y3p-Jy-ng0"/>
                                 <exclude reference="dcU-9T-Y1s"/>
-                                <exclude reference="0JM-yn-khr"/>
-                                <exclude reference="q0w-n5-958"/>
-                                <exclude reference="w59-fW-XZY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -180,17 +180,22 @@
                                 <include reference="rHr-q7-7at"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BlY-gH-dyh"/>
                                 <include reference="0ek-Nc-nTx"/>
                                 <include reference="F6x-wb-Xlo"/>
                                 <exclude reference="Lgx-Yf-z8Y"/>
                                 <include reference="Sli-1e-fqo"/>
                                 <exclude reference="btu-dw-EH1"/>
-                                <include reference="BlY-gH-dyh"/>
                                 <include reference="Dmp-ES-VOd"/>
                                 <include reference="H8h-N4-sLa"/>
                                 <exclude reference="QpF-MX-j5x"/>
                                 <include reference="tYo-2p-yh0"/>
                                 <exclude reference="td3-cb-bNm"/>
+                                <include reference="0JM-yn-khr"/>
+                                <exclude reference="nRc-hx-d9a"/>
+                                <exclude reference="nav-9q-PBQ"/>
+                                <include reference="q0w-n5-958"/>
+                                <include reference="w59-fW-XZY"/>
                                 <include reference="1KL-M2-ghe"/>
                                 <include reference="2qn-Nv-wlc"/>
                                 <exclude reference="85e-qz-Mdd"/>
@@ -199,11 +204,6 @@
                                 <include reference="dcU-9T-Y1s"/>
                                 <exclude reference="gon-67-s09"/>
                                 <exclude reference="wRz-Hc-tdM"/>
-                                <include reference="0JM-yn-khr"/>
-                                <exclude reference="nRc-hx-d9a"/>
-                                <exclude reference="nav-9q-PBQ"/>
-                                <include reference="q0w-n5-958"/>
-                                <include reference="w59-fW-XZY"/>
                                 <exclude reference="jCC-VL-fVA"/>
                             </mask>
                         </variation>
