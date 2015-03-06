@@ -14,6 +14,7 @@
 
 @property NSMutableArray *locais;
 @property MapaPoint *novoLocal;
+@property int i;
 
 
 +(LocaisSingleton *)instance;

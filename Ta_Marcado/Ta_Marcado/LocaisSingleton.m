@@ -9,7 +9,7 @@
 #import "LocaisSingleton.h"
 
 @implementation LocaisSingleton
-@synthesize locais;
+@synthesize locais, i;
 
 static LocaisSingleton *instancia = nil;
 
@@ -24,6 +24,7 @@ static LocaisSingleton *instancia = nil;
     self = [super init];
     if (self) {
         locais = [[NSMutableArray alloc]init];
+        i = 1;
     }
     return self;
 }
