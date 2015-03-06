@@ -70,7 +70,6 @@
 }
 
 
-
 - (IBAction)localizacaoAtual:(id)sender {
     [locationManager startUpdatingLocation];
     mapa.userTrackingMode = true;

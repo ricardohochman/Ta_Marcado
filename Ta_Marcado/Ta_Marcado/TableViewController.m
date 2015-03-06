@@ -37,13 +37,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return s.locais.count;
 }
@@ -51,14 +49,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CellViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"listaEnd" forIndexPath:indexPath];
-    if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"listaEnd"];//rever com os meninos !!!!!
-    }
+//    if(!cell){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"listaEnd"];//rever com os meninos !!!!!
+//    }
     
     long row = [indexPath row];
-    MapaPoint *ponto = [s.locais objectAtIndex:row];
-    cell.nome.text = [ponto nome];
-    cell.rua.text = [ponto endereco];
+    MapaPoint *mp = [s.locais objectAtIndex:row];
+    cell.nome.text = [mp nome];
+    cell.rua.text = [mp endereco];
     return cell;
 }
 

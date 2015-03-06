@@ -35,14 +35,14 @@
     CLGeocoder *geo = [[CLGeocoder alloc]init];
     CLLocation *aux = [[CLLocation alloc]initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
     [geo reverseGeocodeLocation:aux completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (error==nil) {
+        if (error == nil) {
             CLPlacemark *placemark = [placemarks lastObject];
             NSString *newString = [placemark.thoroughfare stringByAppendingString:@", "];
             NSString *newnewString = [newString stringByAppendingString:placemark.subThoroughfare];
             [self setEndereco: newnewString];
             
         } else {
-            [self setEndereco:@"Não encontrado"];
+            [self setEndereco:@"Endereço não encontrado"];
         }
         [mapa addAnnotation:self];
     }];
