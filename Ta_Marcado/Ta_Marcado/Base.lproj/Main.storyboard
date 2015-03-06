@@ -124,9 +124,6 @@
                                     </mask>
                                 </variation>
                             </toolbar>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-q7-7at">
-                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
-                            </stepper>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrI-ak-csA">
                                 <rect key="frame" x="216" y="537" width="120" height="80"/>
                                 <constraints>
@@ -170,13 +167,10 @@
                             <constraint firstItem="gpb-kz-dlu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1Va-Dr-W4K">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-23"/>
                             </constraint>
-                            <constraint firstItem="BrI-ak-csA" firstAttribute="top" secondItem="rHr-q7-7at" secondAttribute="bottom" constant="50" id="1oe-gI-BAb"/>
                             <constraint firstItem="fW1-Go-bxw" firstAttribute="leading" secondItem="uMs-SJ-nyv" secondAttribute="leading" id="32E-vM-h4H"/>
                             <constraint firstItem="fW1-Go-bxw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5s5-LE-4xk"/>
-                            <constraint firstItem="rHr-q7-7at" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="438" id="6zA-Ls-pmp"/>
                             <constraint firstItem="Pgq-KP-8Dl" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="7ob-f8-FSS"/>
                             <constraint firstItem="BrI-ak-csA" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="85e-qz-Mdd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rHr-q7-7at" secondAttribute="trailing" constant="10" id="A7G-cL-DTs"/>
                             <constraint firstItem="gpb-kz-dlu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CR5-YZ-Kda"/>
                             <constraint firstItem="Pgq-KP-8Dl" firstAttribute="top" secondItem="uMs-SJ-nyv" secondAttribute="bottom" constant="32" id="Dmp-ES-VOd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gpb-kz-dlu" secondAttribute="trailing" constant="-16" id="DrD-Qq-mO6">
@@ -233,7 +227,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gpb-kz-dlu"/>
-                                <exclude reference="rHr-q7-7at"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0UF-Ze-xFP"/>
@@ -249,8 +242,6 @@
                                 <exclude reference="w6u-C6-cin"/>
                                 <exclude reference="xqI-4u-MyF"/>
                                 <exclude reference="ypE-lU-fgX"/>
-                                <exclude reference="6zA-Ls-pmp"/>
-                                <exclude reference="A7G-cL-DTs"/>
                                 <exclude reference="7ob-f8-FSS"/>
                                 <exclude reference="Dmp-ES-VOd"/>
                                 <exclude reference="GMi-PZ-Mzx"/>
@@ -258,7 +249,6 @@
                                 <exclude reference="WGe-6c-HMC"/>
                                 <exclude reference="gNY-5d-Ljp"/>
                                 <exclude reference="hbL-GR-3RA"/>
-                                <exclude reference="1oe-gI-BAb"/>
                                 <exclude reference="GGk-IA-HIe"/>
                                 <exclude reference="Mfp-e5-fj4"/>
                                 <exclude reference="SHo-tO-06h"/>
@@ -282,7 +272,6 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="gpb-kz-dlu"/>
-                                <include reference="rHr-q7-7at"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0UF-Ze-xFP"/>
@@ -300,8 +289,6 @@
                                 <exclude reference="w6u-C6-cin"/>
                                 <exclude reference="xqI-4u-MyF"/>
                                 <include reference="ypE-lU-fgX"/>
-                                <include reference="6zA-Ls-pmp"/>
-                                <include reference="A7G-cL-DTs"/>
                                 <exclude reference="7ob-f8-FSS"/>
                                 <exclude reference="Dmp-ES-VOd"/>
                                 <exclude reference="GMi-PZ-Mzx"/>
@@ -311,7 +298,6 @@
                                 <include reference="gNY-5d-Ljp"/>
                                 <include reference="hbL-GR-3RA"/>
                                 <exclude reference="td3-cb-bNm"/>
-                                <exclude reference="1oe-gI-BAb"/>
                                 <exclude reference="85e-qz-Mdd"/>
                                 <exclude reference="GGk-IA-HIe"/>
                                 <exclude reference="Mfp-e5-fj4"/>
@@ -502,12 +488,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-Vo-rZW">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="408" height="812"/>
-                                </variation>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Local" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="alR-tK-oAH">
                                 <rect key="frame" x="234" y="228" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -527,8 +507,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXb-Y7-qab">
                                 <rect key="frame" x="261" y="300" width="43" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99742687263241014" blue="0.94770852554906415" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Salvar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.89693813134141409" green="0.4169050078731229" blue="0.45916029472239894" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="164" y="279" width="73" height="48"/>
@@ -538,17 +520,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="wcd-Vo-rZW"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="wcd-Vo-rZW"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" red="1" green="0.98535051869328794" blue="0.96019509903944078" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="caixaTexto" destination="alR-tK-oAH" id="jfB-je-Ksk"/>
@@ -556,13 +528,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBL-qD-Cxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="943.5"/>
+            <point key="canvasLocation" x="1260" y="897"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="640" height="1136"/>
         <image name="flag" width="128" height="128"/>
         <image name="lista" width="128" height="128"/>
-        <image name="popup" width="320" height="460"/>
     </resources>
 </document>
