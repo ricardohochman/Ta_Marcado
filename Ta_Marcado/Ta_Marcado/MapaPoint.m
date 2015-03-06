@@ -38,8 +38,14 @@
         if (error == nil) {
             CLPlacemark *placemark = [placemarks lastObject];
             NSString *newString = [placemark.thoroughfare stringByAppendingString:@", "];
-            NSString *newnewString = [newString stringByAppendingString:placemark.subThoroughfare];
-            [self setEndereco: newnewString];
+            NSString *newnewString;
+            if (placemark.subThoroughfare != nil) {
+                newnewString = [newString stringByAppendingString:placemark.subThoroughfare];
+            }
+            else{
+                newnewString = placemark.thoroughfare;
+            }
+                [self setEndereco: newnewString];
             
         } else {
             [self setEndereco:@"Endereço não encontrado"];

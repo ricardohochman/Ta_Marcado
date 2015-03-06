@@ -21,7 +21,7 @@
 @end
 
 @implementation ViewController
-@synthesize locationManager, mapa;
+@synthesize locationManager, mapa, selected, selectedCell;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,19 +35,6 @@
     mapa.userTrackingMode = true;
     s = [LocaisSingleton instance];
     
-//    
-//    MKCoordinateRegion coord1 = {{0.0, 0.0},{0.0, 0.0}};
-//    coord1.center.latitude = -23.5376830;
-//    coord1.center.longitude = -46.6546540;
-//    
-//    MapaPoint *mp1 = [[MapaPoint alloc] initWithCoordinate:coord1.center title:@"Teste 1" end:@"avenida Teste 1"];
-//    
-//    MKCoordinateRegion coord2 = {{0.0, 0.0},{0.0, 0.0}};
-//    coord2.center.latitude = -23.5370830;
-//    coord2.center.longitude = -46.6546540;
-//    MapaPoint *mp2 = [[MapaPoint alloc] initWithCoordinate:coord2.center title:@"Teste 2" end:@"avenida Teste 2"];
-//    [mapa addAnnotation:mp1];
-//    [mapa addAnnotation:mp2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,11 +50,22 @@
 
 
 -(void) viewDidAppear:(BOOL)animated{
+    [mapa removeAnnotations:mapa.annotations];
+    [mapa addAnnotations:s.locais];
     if (s.novoLocal) {
         [s.novoLocal adicionarPin:mapa];
         s.novoLocal = nil;
     }
+    
+    
+    if (s.linha > -1) {
+        MapaPoint *mp = [s.locais objectAtIndex:s.linha];
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mp.coordinate, 500, 500);
+        [mapa setRegion:region animated:YES];
+        s.linha = -1;
+    }
 }
+
 
 
 - (IBAction)localizacaoAtual:(id)sender {

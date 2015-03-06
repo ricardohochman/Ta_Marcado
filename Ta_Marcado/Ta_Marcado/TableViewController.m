@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    s = [[LocaisSingleton alloc ]init];
+    s = [LocaisSingleton instance];
     
     
     tableView.delegate = self;
@@ -55,62 +55,72 @@
     
     long row = [indexPath row];
     MapaPoint *mp = [s.locais objectAtIndex:row];
-    cell.nome.text = [mp nome];
-    cell.rua.text = [mp endereco];
+    cell.nome.text = [[s.locais objectAtIndex:row] nome];
+    cell.rua.text = [[s.locais objectAtIndex:row] endereco];
     return cell;
 }
 
 
-/*
+
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
  return YES;
  }
- */
+ 
 
-/*
+
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
  if (editingStyle == UITableViewCellEditingStyleDelete) {
  // Delete the row from the data source
+     
+     [s removeLocal:[s.locais objectAtIndex:[indexPath row]]];
+     
  [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
  } else if (editingStyle == UITableViewCellEditingStyleInsert) {
  // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
  }
  }
- */
 
-/*
+
+
  // Override to support rearranging the table view.
  - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+//     NSString *item = [s.locais objectAtIndex:[fromIndexPath row]];
+//     [s.locais removeObject:item];
+//     [s.locais insertObject:item atIndex:toIndexPath.row];
+//     [item release];
+     
  }
- */
+ 
 
-/*
+
  // Override to support conditional rearranging of the table view.
  - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
  return YES;
  }
- */
+ 
 
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if([segue.identifier isEqualToString:@"marcados"]){
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        ViewController *appView = segue.destinationViewController;
-//        long row = [indexPath row];
-//        NSArray *aux = [NSArray arrayWithObjects:[nomesApp objectAtIndex:row], [categoriaApp objectAtIndex:row], [imgApp objectAtIndex:row], nil];
-//        appView.dados = aux;
-//    }
-//     Get the new view controller using [segue destinationViewController].
-//     Pass the selected object to the new view controller.
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"marcados"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ViewController *vc = segue.destinationViewController;
+        long row = [indexPath row];
+        vc.selectedCell = row;
+        vc.selected = YES;
 
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{;
+    long row = [indexPath row];
+    s.linha = row;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 - (IBAction)voltar:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

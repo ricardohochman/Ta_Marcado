@@ -9,7 +9,7 @@
 #import "LocaisSingleton.h"
 
 @implementation LocaisSingleton
-@synthesize locais, i;
+@synthesize locais, i, linha;
 
 static LocaisSingleton *instancia = nil;
 
@@ -25,11 +25,16 @@ static LocaisSingleton *instancia = nil;
     if (self) {
         locais = [[NSMutableArray alloc]init];
         i = 1;
+        linha = -1;
     }
     return self;
 }
 
 -(void)addLocal:(MapaPoint *)mp{
     [locais addObject:mp];
+}
+
+-(void)removeLocal:(MapaPoint *)mp {
+    [locais removeObject:mp];
 }
 @end

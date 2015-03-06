@@ -15,9 +15,11 @@
 @property NSMutableArray *locais;
 @property MapaPoint *novoLocal;
 @property int i;
+@property long linha;
 
 
 +(LocaisSingleton *)instance;
 -(void)addLocal:(MapaPoint *)mp;
+-(void)removeLocal:(MapaPoint *)mp;
 
 @end
