@@ -249,13 +249,6 @@
                                 <exclude reference="WGe-6c-HMC"/>
                                 <exclude reference="gNY-5d-Ljp"/>
                                 <exclude reference="hbL-GR-3RA"/>
-                                <exclude reference="GGk-IA-HIe"/>
-                                <exclude reference="Mfp-e5-fj4"/>
-                                <exclude reference="SHo-tO-06h"/>
-                                <exclude reference="Shr-Ss-jlb"/>
-                                <exclude reference="atU-ko-S4W"/>
-                                <exclude reference="iOP-Eb-MdG"/>
-                                <exclude reference="pcK-1g-EIy"/>
                                 <exclude reference="32E-vM-h4H"/>
                                 <exclude reference="5s5-LE-4xk"/>
                                 <exclude reference="N69-BH-jdp"/>
@@ -267,6 +260,13 @@
                                 <exclude reference="hCd-jP-3Yb"/>
                                 <exclude reference="j0G-Vn-igX"/>
                                 <exclude reference="u3H-kk-SWa"/>
+                                <exclude reference="GGk-IA-HIe"/>
+                                <exclude reference="Mfp-e5-fj4"/>
+                                <exclude reference="SHo-tO-06h"/>
+                                <exclude reference="Shr-Ss-jlb"/>
+                                <exclude reference="atU-ko-S4W"/>
+                                <exclude reference="iOP-Eb-MdG"/>
+                                <exclude reference="pcK-1g-EIy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -298,16 +298,6 @@
                                 <include reference="gNY-5d-Ljp"/>
                                 <include reference="hbL-GR-3RA"/>
                                 <exclude reference="td3-cb-bNm"/>
-                                <exclude reference="85e-qz-Mdd"/>
-                                <exclude reference="GGk-IA-HIe"/>
-                                <exclude reference="Mfp-e5-fj4"/>
-                                <exclude reference="SHo-tO-06h"/>
-                                <exclude reference="Shr-Ss-jlb"/>
-                                <exclude reference="atU-ko-S4W"/>
-                                <exclude reference="gon-67-s09"/>
-                                <include reference="iOP-Eb-MdG"/>
-                                <exclude reference="pcK-1g-EIy"/>
-                                <exclude reference="wRz-Hc-tdM"/>
                                 <include reference="32E-vM-h4H"/>
                                 <include reference="5s5-LE-4xk"/>
                                 <exclude reference="N69-BH-jdp"/>
@@ -321,6 +311,16 @@
                                 <exclude reference="nRc-hx-d9a"/>
                                 <exclude reference="nav-9q-PBQ"/>
                                 <include reference="u3H-kk-SWa"/>
+                                <exclude reference="85e-qz-Mdd"/>
+                                <exclude reference="GGk-IA-HIe"/>
+                                <exclude reference="Mfp-e5-fj4"/>
+                                <exclude reference="SHo-tO-06h"/>
+                                <exclude reference="Shr-Ss-jlb"/>
+                                <exclude reference="atU-ko-S4W"/>
+                                <exclude reference="gon-67-s09"/>
+                                <include reference="iOP-Eb-MdG"/>
+                                <exclude reference="pcK-1g-EIy"/>
+                                <exclude reference="wRz-Hc-tdM"/>
                                 <exclude reference="jCC-VL-fVA"/>
                             </mask>
                         </variation>
@@ -507,7 +507,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXb-Y7-qab">
                                 <rect key="frame" x="261" y="300" width="43" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99742687263241014" blue="0.94770852554906415" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" red="0.89693813134141409" green="0.4169050078731229" blue="0.45916029472239894" alpha="1" colorSpace="calibratedRGB"/>
