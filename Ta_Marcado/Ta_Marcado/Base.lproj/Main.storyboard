@@ -371,41 +371,41 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jex-Ar-taa">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="dHy-08-qGW"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Xsq-Ob-xjJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="dHy-08-qGW"/>
+                                                            <exclude reference="Xsq-Ob-xjJ"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="dHy-08-qGW"/>
+                                                            <include reference="Xsq-Ob-xjJ"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-Kc-J99">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="170" id="LR5-tR-M5D"/>
                                                         <constraint firstAttribute="height" constant="21" id="sa0-Wk-grj"/>
+                                                        <constraint firstAttribute="width" constant="250" id="ugJ-Xd-NxT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="LR5-tR-M5D"/>
                                                             <exclude reference="sa0-Wk-grj"/>
+                                                            <exclude reference="ugJ-Xd-NxT"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="LR5-tR-M5D"/>
                                                             <include reference="sa0-Wk-grj"/>
+                                                            <include reference="ugJ-Xd-NxT"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
