@@ -22,9 +22,6 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-//    s.locais = @[@"Casa da Vivi", @"Casa do Ricardo"];
-//    s.enderecos = @[@"Rua Indiana", @"Avenida Angelica"];
-    //self.tableView.contentInset = UIEdgeInsetsMake(40.0f, 0.0f, 0.0f, 0.0);
     
     
 }
@@ -51,7 +48,6 @@
     CellViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"listaEnd" forIndexPath:indexPath];
     
     long row = [indexPath row];
-    MapaPoint *mp = [s.locais objectAtIndex:row];
     cell.nome.text = [[s.locais objectAtIndex:row] nome];
     cell.rua.text = [[s.locais objectAtIndex:row] endereco];
     return cell;
